@@ -1,0 +1,21 @@
+:root{
+  --bg:#0b0210;
+  --accent-1:#9b4dff;
+  --accent-2:#6b2cff;
+  --muted:#d6cdee;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, Arial;background:linear-gradient(180deg,#05010a,var(--bg));color:var(--muted);min-height:100vh}
+.page{max-width:1100px;margin:36px auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between}
+.header h1{font-family:Orbitron, sans-serif;color:var(--accent-1);margin:0}
+.subtitle{color:#b9aef6}
+.status{margin:18px 0;color:#b9aef6}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{position:relative;padding:16px;border-radius:12px;border:1px solid rgba(107,44,255,0.12);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+.card-link{position:absolute;inset:0}
+.card-title{font-family:Orbitron, sans-serif;color:var(--accent-1);margin:0 0 8px}
+.card-desc{margin:0;color:#d6cdee;font-size:13px;min-height:38px}
+.card-meta{display:flex;gap:12px;margin-top:10px;font-size:12px;color:#b5aee0}
+.pill{background:linear-gradient(90deg, rgba(155,77,255,0.12), rgba(107,44,255,0.08));padding:6px 8px;border-radius:999px}
+.footer{text-align:center;margin-top:26px;color:#a99fe3}
