@@ -7,7 +7,7 @@ type Profile = {
 }
 
 const GITHUB_USER = 'HadesTheSilent'
-const LINKEDIN_URL = 'https://www.linkedin.com/in/hadesthesilent/'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/jullian-salles-escobar-084588251/'
 
 export default function ProfileHeader() {
   const [profile, setProfile] = useState<Profile | null>(null)
