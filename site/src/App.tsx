@@ -1,7 +1,11 @@
-// Deprecated placeholder. The application entry uses `pages/Home.tsx` directly.
-export default function App(){
-  return null
-}
+import { Analytics } from '@vercel/analytics/react'
+import Home from './pages/Home'
 
-  return null
+export default function App() {
+  return (
+    <>
+      <Home />
+      <Analytics />
+    </>
+  )
 }
