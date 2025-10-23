@@ -52,7 +52,7 @@ export default function Home(){
         )}
       </main>
 
-      <footer className="footer">© 2025 — Jullian Salles</footer>
+      <footer className="footer">© 2025 — HadesTheSilent</footer>
     </div>
   )
 }
