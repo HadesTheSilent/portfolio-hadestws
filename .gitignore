@@ -1,7 +1,41 @@
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
 dist/
+build/
 .vite/
+
+# Environment variables (NEVER commit secrets!)
 .env
 .env.local
-*.log
+.env.*.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+*.log
+
+# Vercel
+.vercel/
+.vercel.json.local
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+

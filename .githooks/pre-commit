@@ -1,0 +1,24 @@
+#!/bin/sh
+# GitLeaks Pre-commit Hook
+# Previne que secrets sejam commitados
+
+GITLEAKS_BINARY=$(which gitleaks)
+
+if [ -z "$GITLEAKS_BINARY" ]; then
+    echo "❌ GitLeaks não está instalado"
+    echo "📦 Para instalar: choco install gitleaks (Windows) ou brew install gitleaks (macOS)"
+    exit 0
+fi
+
+echo "🔍 Verificando secrets com GitLeaks..."
+gitleaks detect --source . --exit-code 1 --log-level error
+
+if [ $? -eq 1 ]; then
+    echo "❌ GitLeaks detectou secrets potenciais!"
+    echo "⚠️  Commit abortado. Remova os secrets antes de fazer commit."
+    echo "💡 Use: gitleaks detect --source . --verbose para mais detalhes"
+    exit 1
+fi
+
+echo "✅ Nenhum secret detectado!"
+exit 0

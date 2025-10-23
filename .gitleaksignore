@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "description": "GitLeaks configuration for portfolio-hadestws",
+  "extends": ["gitleaks-admin"],
+  "rules": [
+    {
+      "id": "vercel-token",
+      "description": "Vercel Token",
+      "pattern": "vercel_[a-zA-Z0-9_]{32,}",
+      "keywords": ["vercel", "token"]
+    },
+    {
+      "id": "github-pat",
+      "description": "GitHub Personal Access Token",
+      "pattern": "ghp_[a-zA-Z0-9]{36,255}",
+      "keywords": ["github", "ghp_"]
+    }
+  ],
+  "allowlist": {
+    "description": "Allowlist for false positives",
+    "paths": [
+      "node_modules/",
+      ".git/",
+      "dist/",
+      "build/"
+    ]
+  }
+}
