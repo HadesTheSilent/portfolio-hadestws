@@ -1,0 +1,13 @@
+# TypeScript files
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Exclude build/dist from language detection
+dist/** linguist-generated=true
+build/** linguist-generated=true
+node_modules/** linguist-generated=true
+*.min.js linguist-generated=true
+*.min.css linguist-generated=true
+
+# Set primary language to TypeScript
+site/src/** linguist-language=TypeScript
